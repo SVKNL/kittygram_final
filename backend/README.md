@@ -1,52 +1,41 @@
 ![workflow status](https://github.com/SVKNL/kittygram_final/actions/workflows/main.yml/badge.svg)
-### Как запустить проект:
+### Описание проекта:
 
-Клонировать репозиторий и перейти в него в командной строке:
+Сайт про котиков с возможностью добавлять фото и профиль своих котов.
 
-```
-git clone https://github.com/yandex-praktikum/kittygram_backend.git
-```
+Стэк:
 
 ```
-cd kittygram_backend
+Python
+Django
+DRF
+Docker
+Nginx
 ```
 
-Cоздать и активировать виртуальное окружение:
+Запуск проекта:
 
 ```
-python3 -m venv env
+Скачать репозиторий при помощи команды: git clone <ccылка с github>
+Запускаем контейнеры командой: sudo docker compose -f docker-compose.production.yml up
 ```
 
-* Если у вас Linux/macOS
-
-    ```
-    source env/bin/activate
-    ```
-
-* Если у вас windows
-
-    ```
-    source env/scripts/activate
-    ```
+Выполнить миграции и сбор статики:
 
 ```
-python3 -m pip install --upgrade pip
+sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
+
+sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
+
+sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /static/static/
 ```
 
-Установить зависимости из файла requirements.txt:
+Проект доступен по адресу:
 
 ```
-pip install -r requirements.txt
+localhost:9000
 ```
 
-Выполнить миграции:
-
-```
-python3 manage.py migrate
-```
-
-Запустить проект:
-
-```
-python3 manage.py runserver
-```
+Автор:
+Карпов Степан
+[Github](https://github.com/SVKNL)
