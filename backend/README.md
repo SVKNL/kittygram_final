@@ -19,6 +19,19 @@ Nginx
 Скачать репозиторий при помощи команды: git clone <ccылка с github>
 Запускаем контейнеры командой: sudo docker compose -f docker-compose.production.yml up
 ```
+Заполнение файла .env в папке проекта:
+
+```
+Заполнить данные в формате:
+POSTGRES_USER=user
+POSTGRES_PASSWORD=password
+POSTGRES_DB=django
+
+DB_HOST=db
+DB_PORT=5432
+SECRET_KEY=djangosecretkey
+ALLOWED_HOSTS=your ip adress
+```
 
 Выполнить миграции и сбор статики:
 
