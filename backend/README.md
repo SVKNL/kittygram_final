@@ -30,7 +30,7 @@ POSTGRES_DB=django
 DB_HOST=db
 DB_PORT=5432
 SECRET_KEY=djangosecretkey
-ALLOWED_HOSTS=your ip adress
+ALLOWED_HOSTS=your ip adress including 'localhost'
 ```
 
 Выполнить миграции и сбор статики:
