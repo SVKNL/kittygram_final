@@ -13,12 +13,6 @@ Docker
 Nginx
 ```
 
-Запуск проекта:
-
-```
-Скачать репозиторий при помощи команды: git clone <ccылка с github>
-Запускаем контейнеры командой: sudo docker compose -f docker-compose.production.yml up
-```
 Заполнение файла .env в папке проекта:
 
 ```
@@ -31,6 +25,13 @@ DB_HOST=db
 DB_PORT=5432
 SECRET_KEY=djangosecretkey
 ALLOWED_HOSTS=your ip adress including 'localhost'
+```
+
+Запуск проекта:
+
+```
+Скачать репозиторий при помощи команды: git clone <ccылка с github>
+Запускаем контейнеры командой: sudo docker compose -f docker-compose.production.yml up
 ```
 
 Выполнить миграции и сбор статики:
